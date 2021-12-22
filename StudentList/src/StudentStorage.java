@@ -8,9 +8,9 @@ public class StudentStorage {
     }
 
     public void addStudent(String data) {
-        String[] components = data.split("\\s+");
+        String[] components = data.split("\\s+"); // данные разбиваются
         String name = components[0] + " " + components[1];
-        storage.put(name, new Student(name, components[3], components[2]));
+        storage.put(name, new Student(name, components[3], components[2])); // обработать исключение если нет эл-та массива
     }
 
     public void listStudent() {
